@@ -1,0 +1,103 @@
+
+h2{
+color: #fff;
+text-align: center;
+	
+}
+
+
+/* body content styles */
+.style {
+	font-size: 20px;
+    
+	padding: 20px;
+	border-radius: 20px;
+	background-image: url("bg_quiz.jpg");
+
+	
+}
+/* questions styles */
+#quiz{
+	font-size: 20px; 
+	color: black;
+}
+/* styles for results outcome */
+#results{
+	font-size: 25px;
+	color:red;
+	text-align:center;
+	background-color: beige;
+}
+/* body styles in css */
+body{
+	font-size: 25px;
+	font-family: Serif;
+	
+	
+
+	padding-left: 50px;
+	padding-right: 50px;	
+	background-color: #00004F;
+}
+
+.question{
+	font-weight: 600;
+}
+.answers {
+    margin-bottom: 20px;
+}
+/* styles for submit button */
+#submit{
+	font-family: sans-serif;
+	font-size: 20px;
+	color: #ffff;
+	text-align: center;
+	background-color: #299;
+	border: 0px;
+	border-radius: 3px;
+	cursor: pointer;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+/* hover submit button */
+#submit:hover{
+	background-color: grey;
+}
+
+/* begin button styles */
+.buttons {
+    background-color: #299;
+    color: white;
+	font-size: 20px;
+	font-family: 'Merriweather', serif;
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+	cursor: pointer;
+}
+
+.buttons:hover{
+	background-color: rgb(231, 98, 64);
+}
+/* styles for the time left count */
+#font{
+    text-align: center;
+    font-size: 28px;
+    color: rgb(185, 72, 72);
+	font-weight: bold;
+	background-color: honeydew;
+	border-radius: 22px;
+
+  
+    padding-bottom: 2px;
+	
+}
+/* back to top link */
+.arrow{
+	background-color: #ffff;
+	text-decoration: none;
+	font-size: small;
+	float: left;
+
+}

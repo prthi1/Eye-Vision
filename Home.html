@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        home Page
+    </title>
+    <link rel="stylesheet" href="CSS/home.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper" id="nav">
+            <div class="logo">
+                <img src="photos/4.png" alt="">
+            </div>
+            <ul class="nav-area">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="buy products.html.html">Buy Products</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+                <li><a href="sitemap.html">Site map</a></li>
+                <li><a href="thumbnail.html">Images</a></li>
+                <li><a href="qry.html">Feedback</a></li>
+                <li><a href="Student_details.html">About us</a></li>
+            </ul>
+        </div>
+        <div class="welcome-text">
+            <h1><i>About Clear vision</i></h1>
+            <p>The Clear Vision Group of Companies has built a reputation as one of the best eye care solution providers
+                in Sri Lanka by using an innovative approach and state-of-the-art equipment to ensure that customers
+                receive world-class eye care at all branches. During our nearly 30 years of operations, we have
+                successfully become the first company in Sri Lanka to bring the local eye care industry on par with
+                global standards. We have also pioneered the introduction of the best range of eyewear brands recognized
+                globally to the local market. Our high quality, high precision contact lenses, optical and ophthalmic
+                products are available at all Vision Care outlets.</p>
+        </div>
+
+    </header>
+    <div class="row">
+        <div class="column">
+            <a href="eye.html"><img src="photos/eyeinves.png"></a>
+        </div>
+        <div class="column">
+            <a href="vision.html"><img src="photos/visionthe.png"></a>
+        </div>
+        <div class="column">
+            <a href="low.html"><img src="photos/low vis.png"></a>
+        </div>
+    </div>
+    <div class="top">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    </div>
+    <footer>
+        <a href="prathik.html">Page Developer</a>
+    </footer>
+
+</body>
+<script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+
+
+</html>

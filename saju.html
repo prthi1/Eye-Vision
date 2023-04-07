@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <link rel="stylesheet"> 
+    <style>
+        .nav-area {
+            float: right;
+            list-style: none;
+            margin-top: 30px;
+        }       
+
+        .nav-area li {
+            display: inline-block;
+        }   
+
+        .nav-area li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-family: poppins;
+            font-size: 16px;
+        }
+
+        .nav-area li a:hover {
+            background:deepskyblue;
+            color: #fff;
+            border-radius: 100px;
+        }
+
+        .logo img {
+            width: 80px;
+            float: left;
+            height: auto;
+        }
+        .footer{
+            font-family: Times,serif;
+            width:100%;
+            height: 50px;
+            padding-top:15px;
+            bottom:0;
+            background-color:deepskyblue;    
+        }
+
+        .footer a{
+            cursor: default;
+            color:white;
+            text-decoration:none;
+            padding:15px 25px;
+            border-radius:15px;
+        }
+
+        .footer a:hover{
+            transition-duration: 0.5s;
+            background-color: #00004F;
+    
+        }
+        
+        body{
+            background:#00004f;
+           
+        }
+        h1{
+            text-align:center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 50px;
+            color: rgb(255, 255, 255);
+        }
+        .s1{
+            background: rgba(247, 236, 236, 0.2);
+	        border-radius:16px;
+	        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	        backdrop-filter: blur(8.7px);
+	        -webkit-backdrop-filter: blur(8.7px);
+	        border: 1px solid rgba(255, 255, 255, 0.374);
+            color: rgb(255, 255, 255);
+            
+            font-size: 20px;
+            font-style: italic;
+            padding:20px;
+            margin:auto;
+        }
+        .product description{
+            float:right;
+            padding-top: 50px
+              
+        }
+        table{
+            width:120%;
+            color:#fff;
+
+            
+        }
+         
+        
+        
+       
+    </style>
+</head>
+
+<body>
+    <div class="wrapper" id="nav">
+        <div class="logo">
+        <img src="logo.png" alt="">
+        </div>
+        <ul class="nav-area">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="buy products.html.html">Buy Products</a></li>
+            <li><a href="Quiz.html">Quiz</a></li>
+            <li><a href="sitemap.html">Site map</a></li>
+            <li><a href="thumbnail.html">Images</a></li>
+            <li><a href="qry.html">Feedback</a></li>
+            <li><a href="Student_details.html">About us</a></li>
+        </ul>
+    </div>
+<div class="welcoming">
+  <h1>Welcome to Clear Vision</h1>
+</div>
+
+<form name="MyForm" onsubmit="return validateForm()">
+<div class="store">
+<div class="s1">
+    <div class="pic">
+        <img src = "sunglass.jfif" width="300" height="200">
+        <br>
+        <h2> sunglass </h2> 
+    </div>
+    <div class="product description">
+        <b>RS 5600.00</b><br>
+        +free shipping<br>
+        <label for="Quantity">Quantity: </label>
+        <input type="number" name="quantity" id="product1" min="0">
+        <button type="button" onclick="shopedproduct1()">Add to Cart</button>
+    </div>
+</div>
+
+<div class="s1">
+    <div class="pic">
+        <img src="contact lens.jfif" width="300" height="200">
+        <h2>contact lens</h2>
+    </div>
+    <div class="product description">
+        <b>RS:11000.00</b><br>
+        +free shipping<br>
+        <label for="Quantity">Quantity: </label>
+        <input type="number" name="quantity" id="product2" min="0">
+        <button type="button" onclick="shopedproduct2()">Add to Cart</button>
+    </div>
+</div>
+
+<div class="s1">
+    <div class="pic">
+        <img src="spectacles.jfif" width="300" height="200">
+        <h2>Spectacles</h2>
+    </div>
+    <div class="product description">
+        <b>RS:32000.00</b><br>
+        +free shipping<br>
+        <label for="Quantity">Quantity: </label>
+        <input type="number" name="quantity" id="product3" min="0">
+        <button type="button" onclick="shopedproduct3()">Add to Cart</button>
+    </div>
+</div>
+
+<div class="s1">
+    <div class="pic">
+        <img src="hearing aids.jfif" width="300" height="200">
+        <h2>Hearing Aids</h2>
+    </div>
+    <div class="product description">
+        <b>RS:45000.00</b><br>
+        +free shipping<br>
+        <label for="Quantity">Quantity: </label>
+        <input type="number" name="quantity" id="product4" min="0">
+        <button type="button" onclick="shopedproduct4()">Add to Cart</button>
+    </div>
+</div>
+</div>
+<br>
+<br>
+<div id="invoice">
+<table  >
+    <tr>
+       <th colspan="5">Billing Address</th> <th colspan="5"> Payment</th>
+    </tr>
+    <tr>
+        <td colspan="3"><label for="name">Name:</label></td>
+        <td><input type="text" name="name" id="name" placeholder="Jhon"></td>
+        <td colspan="3"><label for="Card Number">Card Number:</label></td>
+        <td><input type="text" name="Card Number" id="Card Number" placeholder=""></td>
+    </tr>
+    <tr>
+        <td colspan="3"><label for="Email">Email:</label></td>
+        <td><input type="text" name="Email" id="Email" placeholder="jhon@gmail.com"></td>
+        <td colspan="3"><label for="Card Holder Name">Card Holder Name:</label></td>
+        <td><input type="text" name="Card Holder Name" id="Card Holder Name" placeholder=""></td>
+    
+    </tr>
+    <tr>
+        <td colspan="3"><label for="Address">Address:</label></td>
+        <td><input type="text," name="Address" id="Address" placeholder="No.32 colombo"></td>
+        <td colspan="3"><label for="Exp Month">Exp Month:</label></td>
+        <td><input type="text" name="Exp Month" id="Exp Month" placeholder=""></td>
+    </tr>
+    <tr>
+        <td colspan="3"><label for="mobile number">mobile number:</label></td>
+        <td><input type="text" name="mobile number" id="mobile number" placeholder="07********"></td>
+        <td colspan="3"><label for="CVV">CVV:</label></td>
+        <td><input type="text" name="CVV" id="CVV" placeholder=""></td>
+    </tr>
+
+</table>
+</div>
+<div class="place order">
+    <input type="submit" value="place your order" class="purchase">
+    <input type="reset" value="reset" class="reset">
+</div>
+<script src="store.js"></script>
+
+<footer class="footer">
+    <a href="student details.html.html">page developer</a>
+</footer>
+</form>
+</body>
+</html> 

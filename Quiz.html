@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Eye_health_Quiz</title>
+	<link rel="stylesheet" type="text/css" href="Quizz.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="home_safa.css">
+</head>
+<body>
+
+	<div class="wrapper" id="nav">
+            <div class="logo">
+                <img src="4.png" alt="">
+            </div>
+            <ul class="nav-area">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="buy products.html.html">Buy Products</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+                <li><a href="sitemap.html">Site map</a></li>
+                <li><a href="thumbnail.html">Images</a></li>
+                <li><a href="qry.html">Feedback</a></li>
+                <li><a href="Student_details.html">About us</a></li>
+            </ul>
+        </div>
+     <br>
+     <br>
+     <br>
+
+
+
+
+
+
+
+	<h2>Quiz </h2>
+		<div id="frame">
+			<div id="font">
+			<b>Time left: <b id="time">60 seconds</b></b><br />
+			<hr />
+				<div id="disappear">
+					<button class="buttons" onclick="begin()">Begin</button>
+				</div>
+				<p id="message1"></p>
+				<p id="message2"></p>
+			</div>
+		</div>
+		<br>
+
+		<div class="style"><div id="quiz"></div></div>
+		<button id="submit">Submit</button>
+		<div id="results"></div>
+		
+
+		<script >
+			function begin() {
+					sec = 60;
+					disappear.innerHTML = "";
+					
+				}
+				function timer() {
+					sec = sec - 1;
+					if (sec < 60) {
+						time.innerHTML = sec;
+					}
+
+					if (sec < 1) {
+						window.clearInterval(update);
+						message1.innerHTML = "Time is up";
+					}
+				}
+				update = setInterval("timer()", 1000);
+
+		function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
+		
+		function showQuestions(questions, quizContainer){
+			let output = [];
+			let answers;
+
+		
+			for(let i=0; i<questions.length; i++){
+			
+			
+				answers = [];
+
+			
+				for(letter in questions[i].answers){
+
+				
+					answers.push(
+						'<label>'
+							+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
+							+ letter + ': '
+							+ questions[i].answers[letter]
+						+ '</label>'
+					);
+				}
+				output.push(
+					'<div class="question">' + questions[i].question + '</div>'
+					+ '<div class="answers">' + answers.join('') + '</div>'
+				);
+			}
+
+		quizContainer.innerHTML = output.join('');
+		}
+
+		function showResults(questions, quizContainer, resultsContainer){
+			let answerContainers = quizContainer.querySelectorAll('.answers');
+		
+		
+			let userAnswer = '';
+			let numCorrect = 0;
+		
+		
+			for(let i=0; i<questions.length; i++){
+
+			
+				userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+
+			
+			
+				if(userAnswer===questions[i].correctAnswer){
+				
+				numCorrect++;
+				
+		
+				answerContainers[i].style.color = 'green';
+				}
+			
+				else{
+				
+				answerContainers[i].style.color = 'red';
+				}
+			}
+
+		
+		resultsContainer.innerHTML ='Your score is ' + numCorrect*10 + '%' ;
+		if(numCorrect*10 <20){
+					document.body.style.background="brown"
+					}
+					else if(numCorrect*10 <80){
+						document.body.style.background="rgb(236,201,166)"
+					}else{
+						document.body.style.background="green"
+				}
+		}
+		
+		showQuestions(questions, quizContainer);
+
+		
+		submitButton.onclick = function(){
+			showResults(questions, quizContainer, resultsContainer,timer);
+		}
+	}
+
+	let myQuestions = [
+		{
+			question: "Question 1:- What is the easises alternative for  bluelight blocking glasses? ",
+			answers: {
+				a: 'Artificial tearing'+"<br>",
+				b: 'Contact lences'+"<br>",
+				c: 'Taking frequent breaks'+"<br>"
+			},
+			correctAnswer: 'c'
+		},
+		
+		{
+			question: " Question 2:-What is not a cause for cataracts? ",
+			answers: {
+				a: 'Genetics'+"<br>",
+				b: 'Ageing'+"<br>",
+				c: 'UV rays'+"<br>"
+			},
+			correctAnswer: 'a'
+		},
+		
+		{
+			question: " Question 3:- Whhat is an early sign for glaucoma?",
+			answers: {
+				a: 'Tunnel vision'+"<br>",
+				b: 'There arent any early signs, symptoms are experience after it is severe '+"<br>",
+				c: 'High eye pressure'+"<br>"
+			},
+			correctAnswer: 'b'
+		},
+		
+		{
+			question: " Question 4:-Is vitamin C good for eyes, or is it a myth?",
+			answers: {
+				a: 'myth'+"<br>",
+				b: 'no'+"<br>",
+				c: 'yes'+"<br>"
+			},
+			correctAnswer: 'c'
+		},
+		
+		{
+			question: " Question 5:-is routine eyecheckups important?",
+			answers: {
+				a: 'Not necessary if your eye sight is helathy'+"<br>",
+				b: 'Sometimes ageing is a cause so it depends for one another'+"<br>",
+				c: 'Yes, regular eyecheckups can diagnose eye conditions'+"<br>"
+			},
+			correctAnswer: 'c'
+		},
+		
+		{
+			question: " Question 6:-Are there contact lences for color vision deficency ?",
+			answers: {
+				a: 'Yes, it is called X chrome lences'+"<br>",
+				b: 'no, there isnt  any invented so far'+"<br>",
+				c: 'Eye glassees is the only option'+"<br>",
+			},
+			correctAnswer: 'a'
+		},
+		
+		{
+			question: " Question 7:- Can children develop glaucoma and cataracts?",
+			answers: {
+				a: 'No coz these are age related diseeases'+"<br>",
+				b: 'There is a low chance for children '+"<br>",
+				c: 'Possible due to genetic cinditons'+"<br>",
+			},
+			correctAnswer:'c'
+		},
+		
+		{
+			question: " QuestiKellyon 8:-Which is not a kind of cataract?",
+			answers: {
+				a: ' Diabetic'+"<br>",
+				b: 'Congenital'+"<br>",
+				c: 'Drug  induced'+"<br>",
+			},
+			correctAnswer:'a'
+		},
+		
+		{
+			question: " Question 9:-Can 12 year olds wear conatact lences? ",
+			answers: {
+				a: 'There is an age limit'+"<br>", 
+				b: 'There is no age limit for contact lences'+"<br>",
+				c: 'Depends on the person'+"<br>",
+			},
+			correctAnswer:'b'
+		},
+		
+		{
+			question: " Question 10:- Which of the following is not a reson for eye twitching?",
+			answers: {
+				a: 'Ageing'+"<br>", 
+				b: 'Smoking'+"<br>",
+				c: 'Stress'+"<br>",
+			
+				
+			},
+			correctAnswer:'a'
+		}
+	];
+
+		let quizContainer = document.getElementById('quiz');
+		let resultsContainer = document.getElementById('results');
+		let submitButton = document.getElementById('submit');
+
+
+		generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+		</script>
+	
+		<br>
+		<a class="arrow" href="#top"><img src="arrow.png" alt="arrow" style="width:25px; height:25px;"></a>
+		<br>
+		<br>
+		<br>
+
+
+
+
+
+</body>
+<footer>
+	<a href="Safa_editor.html"> Page Editor</a>
+</footer>
+</html>

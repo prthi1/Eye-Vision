@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        home Page
+    </title>
+    <link rel="stylesheet" href="CSS/qry.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="wrapper" id="nav">
+            <div class="logo">
+                <img src="photos/4.png" alt="">
+            </div>
+            <ul class="nav-area">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="buy products.html.html">Buy Products</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+                <li><a href="sitemap.html">Site map</a></li>
+                <li><a href="thumbnail.html">Images</a></li>
+                <li><a href="qry.html">Feedback</a></li>
+                <li><a href="Student_details.html">About us</a></li>
+            </ul>
+        </div>
+        <div class="qry">
+            <h1><i>Quary Form</i></h1>
+        
+ 
+            <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+            
+                <label for="fname"><b>First Name:</b></label><br>
+                <input type="text" id="fname" name="fname" placeholder="Enter Your First Name"><br>
+                
+                <label for="sname"><b>Surname</b></label><br>
+                <input type="text" id="sname" name="sname" placeholder="Enter Your Surname"><br>
+                
+                <label for="email"><b>Email</b></label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your Email ID"><br>
+                
+                <label for="rating">How would you rate us:</label><br><br>
+                    <input type="radio" name="radioButton" id="rating1" value="excellent" />Excellent 
+                    <input type="radio" name="radioButton" id="rating2" value="good" />Good 
+                    <input type="radio" name="radioButton" id="rating3" value="poor" />Poor 
+                    <input type="radio" name="radioButton" id="rating4" value="bad" />Bad<br><br>
+                
+                   <label for="text">Any comments:</label><br><br>
+                   <textarea name="textarea" cols="24" rows="2" id="comments"></textarea><br><br>
+             
+               
+                
+                    <input type="submit" class="button" value="Submit">
+                    <input type="reset" class="button" value="Reset">
+                
+            
+        </form>
+    </div>
+    <script src="JS/feedback.js"></script>
+    
+    </header>
+   
+    </body>
+<footer>
+    <a href="prathik.html">Page Developer</a>
+</footer>
+</html>

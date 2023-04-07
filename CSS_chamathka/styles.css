@@ -1,0 +1,188 @@
+body{
+	background-color:#00004F;
+	font-family: Times, serif;
+	color:white;
+}
+
+*{
+	padding:0px;
+	margin:0px;
+	box-sizing: border-box;
+}
+
+.header_shop{
+	width: 100%;
+	height: 800px;
+	background-image: url("../image/ball.jpg");
+	background-size: cover;
+}
+
+.header_mainpage{
+	width: 100%;
+	height: 700px;
+	background-image: url("../image/bg.jpg");
+	background-size: cover;
+}
+
+.contentpage_cricket{
+	width: 100%;
+	height: 700px;
+	background-image: url("../image/image7.jpg");
+	background-size: cover;
+}
+
+.navbar{
+    background-color: #00000080;
+    width:100%;
+    padding:5px;
+    padding-bottom:0;
+    padding-top:0;
+    position:fixed;
+}
+
+.navbar .navbar-right ul li{
+list-style-type:none;
+display:inline-block;
+}
+
+.navbar .navbar-right ul li a{
+padding: 10px 20px;
+font-family: Times, Serif;
+border-radius:10px;
+color:white;
+text-decoration: none;
+}
+
+.navbar .navbar-right ul li a:hover{
+background-color: #ffffff80;
+transition-duration: 1s;
+}
+
+.navbar .navbar-right{
+float:right;
+padding-top:20px;
+}
+
+.introduction {
+	padding-top:15px;
+	height:250px;
+	width:1000px;
+	margin: auto;
+	line-height:3em;
+}
+
+.introduction_cricket {
+	padding-top:15px;
+	height:475px;
+	width:1000px;
+	margin: auto;
+	line-height:2.3em;
+}
+
+.introduction .content{
+	line-height:2em;
+}
+
+#intro_slogan {
+	font-family:Times, serif;
+	font-size: 50px;
+	text-align:center;
+	color: white;
+}
+
+#intro_content {
+	text-align:center;
+	color:white;
+	font-size: 19px;
+}
+
+.contentpage_sachin{
+	width: 100%;
+	height: 700px;
+	background-image: url("../image/image6.webp");
+	background-size: cover;
+}
+
+.sport_selections{
+	margin:0;
+	padding:0;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:60vh;
+}
+
+.sport_selections ul{
+	margin:0;
+	padding:0;
+	display:flex;
+}
+
+.sport_selections ul li{
+	list-style-type:none;
+	margin: 0 10px;
+	transition:0.5s;
+}
+
+.sport_selections ul li a{
+	display:block;
+	position:relative;
+	padding:5px;
+	transition:0.5s;
+}
+
+.sport_selections ul:hover li a{
+	transform: scale(1.2);
+	opacity:0.2;
+	filter:blur(5px);
+}
+
+.sport_selections ul li a:hover{
+	transform: scale(1.5);
+	opacity:1;
+	filter:blur(0);
+}
+
+.footer{
+    font-family:Times, serif;
+    width:100%;
+    height: 70px;
+    padding-top:25px;
+    bottom:0;
+    background-color:deepskyblue;    
+}
+
+.footer a{
+    cursor: default;
+    color:white;
+    text-decoration:none;
+    padding:15px 25px;
+    border-radius:15px;
+}
+
+.footer a:hover{
+    transition-duration: 0.5s;
+    background-color: #00004F;
+    
+}
+
+
+
+/*resposive scroll up button*/
+#myBtn {
+	display:none;
+	position:fixed;
+	bottom:20px;
+	right:30px;
+	font-family:Times, serif;
+	cursor: pointer;
+	font-size:18px;
+	font-weight:normal;
+	border:none;
+	outline:none;
+	background-color:deepskyblue;
+	color:black;
+	padding:15px;
+	border-radius:20px;
+}
+
